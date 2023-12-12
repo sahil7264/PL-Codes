@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonafide Certificate Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #3498db;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #27ae60;
+      color: white;
+      padding: 0.5rem;
+      border: none;
+      cursor: pointer;
+    }
+    .certificate {
+      display: none;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h2 {
+      color: #3498db;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .signature {
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bonafide Certificate Generator</h1>
+  </header>
+
+  <main>
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" required>
+
+    <label for="enrollmentNumber">Enrollment Number:</label>
+    <input type="text" id="enrollmentNumber" required>
+
+    <label for="course">Course:</label>
+    <input type="text" id="course" required>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" required>
+    
+    <button onclick="generateCertificate()">Generate Certificate</button>
+
+    <div class="certificate" id="certificate">
+      <h2>Bonafide Certificate</h2>
+      
+      <p>This is to certify that</p>
+      
+      <h3 id="certStudentName"></h3>
+      
+      <p>with Enrollment Number:</p>
+      
+      <h3 id="certEnrollmentNumber"></h3>
+      
+      <p>is a bonafide student of</p>
+      
+      <h3 id="certCourse"></h3>
+      
+      <p>at our college. The details mentioned above are true as of</p>
+      
+      <h3 id="certDate"></h3>
+
+      <p>Authorized Signature:</p>
+      
+      <div class="signature"></div>
+    </div>
+  </main>
+
+  <script>
+    function generateCertificate() {
+      const studentName = document.getElementById('studentName').value;
+      const enrollmentNumber = document.getElementById('enrollmentNumber').value;
+      const course = document.getElementById('course').value;
+      const date = document.getElementById('date').value;
+
+      // Set certificate details
+      document.getElementById('certStudentName').innerText = studentName;
+      document.getElementById('certEnrollmentNumber').innerText = enrollmentNumber;
+      document.getElementById('certCourse').innerText = course;
+      document.getElementById('certDate').innerText = date;
+
+      // Show the certificate
+      document.getElementById('certificate').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
