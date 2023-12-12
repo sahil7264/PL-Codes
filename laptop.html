@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laptop 1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="cart.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="laptop1.html">Laptop 1</a></li>
+          <li><a href="laptop2.html">Laptop 2</a></li>
+          <li><a href="laptop3.html">Laptop 3</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="login.html">Login / Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="div-class">
+      <main>
+        <h1>Lenovo Ideapad Gaming</h1>
+        <div class="laptop-details">
+          <img src="img.webp" alt="Laptop 1" class="img" />
+          <p>Description of Laptop 1</p>
+          <p>Price: $999</p>
+          <input type="number" id="quantity" value="1" min="1" max="10" />
+
+          <button onclick="addToCart('1', 999)">Add to Cart</button>
+        </div>
+      </main>
+      <main>
+        <h1>Asus Rog</h1>
+        <div class="laptop-details">
+          <img src="img.webp" alt="Laptop 1" class="img" />
+          <p>Description of Laptop 1</p>
+          <p>Price: $1000</p>
+          <input type="number" id="quantity" value="1" min="1" max="10" />
+
+          <button onclick="addToCart('2', 1000)">Add to Cart</button>
+        </div>
+      </main>
+      <main>
+        <h1>Acer Nitro</h1>
+        <div class="laptop-details">
+          <img src="img.webp" alt="Laptop 1" class="img" />
+          <p>Description of Laptop 1</p>
+          <p>Price: $500</p>
+          <input type="number" id="quantity" value="1" min="1" max="10" />
+
+          <button onclick="addToCart('3',500)">Add to Cart</button>
+        </div>
+      </main>
+    </div>
+
+    <section class="cart">
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items">
+        <!-- Cart items will be displayed here -->
+      </ul>
+      <p>Total: $<span id="cart-total">0.00</span></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Laptop Shop</p>
+    </footer>
+  </body>
+</html>
